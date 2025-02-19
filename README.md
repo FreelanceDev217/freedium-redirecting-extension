@@ -1,6 +1,14 @@
 # Freedium Redirect Extension
 
-A Chrome extension that adds a "Read on Freedium" button to Medium articles with paywalls, allowing you to read them for free.
+<img src="icons/icon128.png" alt="Freedium Extension Icon" width="64"/>
+
+A Chrome extension that adds a "Read on Freedium" button to Medium articles with paywalls, allowing you to read them for free via [Freedium](https://freedium.cfd).
+
+## What is Freedium?
+
+[Freedium](https://github.com/Freedium-cfd) is a service created to help users read Medium paywalled posts. Initially developed in mid-2023 when Medium changed their paywall method, Freedium now provides access to Medium content through paid subscriptions that are shared through their service.
+
+The project is open source and maintained by the Freedium team, who created this service to help users access educational content on Medium. While the original version used reverse-engineered GraphQL endpoints, the current version works by sharing legitimate Medium subscriptions through their service.
 
 ## Features
 
@@ -55,9 +63,9 @@ Found a new Medium publication domain? Please help by:
 2. If you encounter a paywall, a green "Read on Freedium" button will appear in the bottom right corner
 3. Click the button to open the article on Freedium in a new tab
 
-## Note
+## Credits
 
-This extension only activates on Medium articles and only shows the redirect button when a paywall is detected.
+This extension integrates with [Freedium](https://github.com/Freedium-cfd), a community-driven project that helps users access Medium content. Special thanks to the Freedium team for providing and maintaining the service that makes this extension possible.
 
 ## License
 
