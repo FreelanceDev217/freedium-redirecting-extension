@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Freedium Redirect",
+  "version": "1.0",
+  "description": "Redirects paywalled Medium articles to Freedium",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.medium.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ]
+}
