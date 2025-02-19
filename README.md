@@ -1,13 +1,46 @@
 # Freedium Redirect Extension
 
-A Chrome extension that helps you read Medium articles by redirecting paywalled content to Freedium.
+A Chrome extension that adds a "Read on Freedium" button to Medium articles with paywalls, allowing you to read them for free.
 
 ## Features
 
-- Automatically detects paywalled Medium articles
-- Adds a "Read on Freedium" button when paywall is detected
-- Opens the article on Freedium in a new tab
-- Clean and modern UI
+- Automatically detects Medium paywalled articles
+- Adds a "Read on Freedium" button to bypass the paywall
+- Works on Medium.com and various Medium-based publication sites
+
+## Important Limitation
+
+### Publisher Domain Management
+Due to Chrome's extension manifest limitations, we cannot use wildcard patterns like `*://medium.*.com/*` to match all Medium publisher domains. Chrome's match patterns only allow wildcards in specific positions:
+
+- ✅ Allowed patterns:
+  - `*://*.medium.com/*` (wildcard for subdomains)
+  - `*://medium.com/*` (specific domain)
+
+- ❌ Not allowed:
+  - `*://medium.*.com/*` (wildcard in middle of hostname)
+
+This means we need to manually add each Medium publisher domain to the manifest.json file. Some examples of these domains include:
+- datadriveninvestor.com
+- towardsai.net
+- plainenglish.io
+- betterprogramming.pub
+- and many more...
+
+If you encounter a Medium publication site that doesn't work with the extension, please:
+1. Open an issue with the domain name
+2. Submit a pull request adding the domain to the `matches` array in `manifest.json`
+
+## Contributing
+Found a new Medium publication domain? Please help by:
+1. Forking the repository
+2. Adding the domain to the `matches` array in `manifest.json`:
+   ```json
+   "matches": [
+     "*://*.newpublisher.com/*"
+   ]
+   ```
+3. Submitting a pull request
 
 ## Installation
 

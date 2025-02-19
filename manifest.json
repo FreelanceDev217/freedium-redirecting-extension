@@ -6,7 +6,36 @@
   "permissions": ["activeTab"],
   "content_scripts": [
     {
-      "matches": ["*://*.medium.com/*"],
+      "matches": [
+        "*://medium.com/*",
+        "*://*.medium.com/*",
+        "*://*.datadriveninvestor.com/*",
+        "*://*.towardsai.net/*",
+        "*://*.plainenglish.io/*",
+        "*://*.betterprogramming.pub/*",
+        "*://*.levelup.gitconnected.com/*",
+        "*://*.blog.devgenius.io/*",
+        "*://*.bootcamp.uxdesign.cc/*",
+        "*://*.blog.bitsrc.io/*",
+        "*://*.blog.usejournal.com/*",
+        "*://*.blog.prototypr.io/*",
+        "*://*.blog.angular-university.io/*",
+        "*://*.itnext.io/*",
+        "*://*.codeburst.io/*",
+        "*://*.proandroiddev.com/*",
+        "*://*.blog.kotlin-academy.com/*",
+        "*://*.blog.coinbase.com/*",
+        "*://*.blog.discord.com/*",
+        "*://*.netflixtechblog.com/*",
+        "*://*.blog.tensorflow.org/*",
+        "*://*.blog.logrocket.com/*",
+        "*://*.blog.insightdatascience.com/*",
+        "*://*.betterhumans.pub/*",
+        "*://*.thinkgrowth.org/*",
+        "*://*.uxdesign.cc/*",
+        "*://*.writingcooperative.com/*",
+        "*://*.blog.cleancoder.com/*"
+      ],
       "css": ["styles.css"],
       "js": ["content.js"]
     }
